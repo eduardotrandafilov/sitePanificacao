@@ -31,10 +31,11 @@ header {
   padding-left: 15px;
   padding-right: 15px;
   background-color: transparent;
-  border: 3px solid white;
+  border: 2px solid white;
   font-size: 10px;
   font-weight: bold;
   color: white;
+  margin-top: 20px;
 }
 
 input.btn-tour-receita {
@@ -42,19 +43,28 @@ input.btn-tour-receita {
   padding-left: 15px;
   padding-right: 15px;
   background-color: transparent;
-  border: 1px solid white;
   font-size: 10px;
   font-weight: bold;
   color: rgb(151, 112, 4);
-  border: 3px solid rgb(151, 112, 4);
+  border: 2px solid rgb(151, 112, 4);
+  margin-top: 20px;
 
 }
 
 .receita {
-  text-align: center;
-  overflow: visible;
+  width: 100%;
+  height: 500px;
   background-color: rgb(207, 158, 85);
   padding-bottom: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.receita img {
+  width: 50%;
+  height: 100%;
+  float: left;
+  object-fit: cover;
 }
 
 .img1 {
@@ -69,20 +79,21 @@ input.btn-tour-receita {
 }
 
 .descricao {
-  width: 40%;
-  display: inline-block;
+  width: 50%;
+  height: 100%;
+  float: left;
   text-align: justify;
-  margin-left: 70px;
-  overflow: visible;
+  padding: 80px;
+  box-sizing: border-box;
 }
 
 
 .servicos {
   background-image: url("../img/serviços.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: auto;
-  height: 550px;
+  width: 100%;
+  height: 500px;
   text-align: center;
 }
 
@@ -90,27 +101,77 @@ input.btn-tour-receita {
   width: 80px;
   height: 80px;
   background-color: transparent;
-  margin: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-top: 20px;
+}
 
+footer {
+  position: relative;
+  height: 100px;
 }
 
 footer h3 {
+  position: absolute;
   color: white;
   text-align: center;
-  padding-bottom: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width:975px) {
+@media only screen and (max-width:1170px) {
   .receita {
-    display: block;
-    width: auto;
+    height: 850px;
+  }
+
+  .receita img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .descricao {
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+  }
+
+  .btn-tour-receita {
+    margin-bottom: 20px;
   }
 
 }
 
-@media only screen and (width:975px) {
+@media only screen and (max-width:860px) {
   .receita {
-    display: block;
+    height: 1000px;
+  }
+}
+
+@media only screen and (max-width:590px) {
+  header {
+    height: 700px;
+
+  }
+
+  .receita {
+    height: 1100px;
+  }
+
+  .receita img {
+    object-fit: cover;
+  }
+
+}
+
+@media only screen and (max-width:520px) {
+  header {
+    height: 700px;
+
+  }
+
+  .receita {
+    height: 1300px;
   }
 
 }
